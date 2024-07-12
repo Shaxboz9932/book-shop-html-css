@@ -1,0 +1,151 @@
+.container_detail {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 20% 40% 35%;
+    margin: 3rem;
+}
+
+.detail__book {
+    width: 100%;
+    height: 500px;
+}
+
+.description {
+    width: 100%;
+    height: 500px;
+    margin: 0 3rem;
+    /* border: 2px solid black; */
+}
+
+.detail__book img {
+    width: 100%;
+}
+
+.description h1 {
+    font-style: italic;
+}
+
+.description h2{
+    font-weight: bold;
+}
+.description p i {
+    color: yellow;
+}
+
+.description .book_desc {
+    font-weight: 500;
+    margin: 2rem 0;
+    overflow-x: hidden;
+}
+.description span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.description input {
+    padding: 0.5rem;
+    font-family: fantasy;
+}
+.description button{
+    display: block;
+    margin-top: 2rem;
+    font-family: fantasy;
+    padding: 0.8rem 1rem;
+    background-color: rgb(0, 89, 255);
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.book__comment {
+    width: 100%;
+    margin-left: 50px;
+}
+
+.book__comment h2{
+    text-align: center;
+}
+.book__comment textarea {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-family: fantasy;
+    outline: none;
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid #3e3e3e;
+}
+.book__comment button {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background-color: #ec4b1f;
+    font-family: 'Cuprum';
+    font-weight: 700;
+    border: none;
+    color: aliceblue;
+    border-radius: 3px;
+}
+
+.comment_user {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.comment_user img {
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.comment_user .comment-info {
+    margin-left: 1.5rem;
+}
+.comment_user .comment-info span {
+    margin-left: 0.6rem;
+}
+
+.comment-info p{
+    margin: 0.6rem 0;
+}
+
+.comment-info p i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.response__comment {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(23, 8, 8, 0.4); /* Black w/ opacity */
+}
+
+.response__comment__modal {
+    width: 400px;
+    height: 250px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    border: 2px solid black;
+}
+
+.response__comment__modal h3{
+    margin-top: 1rem;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.response__comment__modal i {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}

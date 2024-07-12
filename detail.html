@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detail</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="input">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h2>Book <span>Shop</span></h2>
+                <div class="cart-info">
+                    <div class="cart-info__icons">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="cart-info__text">
+                        <span>Shopping Cart</span>
+                        <span>items: 5</span>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <nav class="navbar-menu">
+            <a href="">Home</a>
+            <a href="">Categories</a>
+            <a href="">Best Seller</a>
+            <a href="">Brand</a>
+            <a href="">Pages</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container_detail">
+            <div class="detail__book">
+                <img src="./img_book/fastapi.png" alt="fastapi">
+            </div>
+            <div class="description">
+                <h1>FastApi - Modern Python Web Development</h1>
+                <h2>$36</h2>
+                <br>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </p>
+                <p class="book_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deserunt optio provident, quas cumque voluptate facere enim, quos nesciunt aut quibusdam eligendi itaque illo magnam nulla vitae eum. Veniam tenetur maxime culpa, animi laboriosam accusantium? Alias perferendis accusantium repudiandae at consequuntur ipsa. Ullam iusto modi tenetur molestiae, reiciendis deleniti nesciunt!</p>
+                <span>Quantity: </span> <input type="number" value="1" min="1" max="10">
+                <button type="submit">ADD TO CART</button>
+            </div>
+            <div class="book__comment">
+                <h2>Book Comment</h2>
+
+                <div class="response__comment">
+                    <div class="response__comment__modal">
+                        <h3>Response Comment</h3>
+                        <textarea style="width: 90%;" type="text" placeholder="Text....."></textarea>
+                        <button style="width: 90%; cursor: pointer;" type="button">Response</button>
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                <textarea type="text" placeholder="Add your comment..."></textarea>
+                <button type="submit">ADD COMMENT</button>
+                <div class="comments">
+                    <div class="comment_user">
+                        <img src="./user.png" alt="" width="48px" height="48px">
+                        <div class="comment-info">
+                            <b>@rootSystem</b><span>15 hours ago</span>
+                            <p>this book for comment :)</p>
+                            <p>
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <i class="fa-regular fa-thumbs-down"></i>
+                                <i style="color: #ec4b1f" class="fa-solid fa-heart"></i>
+                                <button style="background-color: #3e3e3e;" type="button">Ответить</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment_user">
+                        <img src="./user.png" alt="" width="48px" height="48px">
+                        <div class="comment-info">
+                            <b>@rootSystem</b><span>15 hours ago</span>
+                            <p>this book for comment :)</p>
+                            <p>
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <i class="fa-regular fa-thumbs-down"></i>
+                                <i style="color: #ec4b1f" class="fa-solid fa-heart"></i>
+                                <button class="button__modal" style="background-color: #3e3e3e;" type="button">Ответить</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment_user">
+                        <img src="./user.png" alt="" width="48px" height="48px">
+                        <div class="comment-info">
+                            <b>@rootSystem</b><span>15 hours ago</span>
+                            <p>this book for comment :)</p>
+                            <p>
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <i class="fa-regular fa-thumbs-down"></i>
+                                <i style="color: #ec4b1f" class="fa-solid fa-heart"></i>
+                                <button style="background-color: #3e3e3e;" type="button">Ответить</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Powered by Shakhboz</p>
+        <div class="links">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelectorAll('.comment_user button')
+        const modal = document.querySelector('.response__comment')
+        const exit = document.querySelector('.response__comment__modal i')
+
+        for (var i = 0; i<btn.length; i++) {
+            btn[i].addEventListener('click', () => {
+                modal.style.display = 'block'
+            })
+        }
+
+        exit.addEventListener('click', () => {
+            modal.style.display = 'none'
+        })
+
+
+
+    </script>
+
+</body>
+</html>
